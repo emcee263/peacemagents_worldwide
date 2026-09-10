@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+>
+
+<meta name="theme-color" content="#f4f0e7">
+
+<title>PEACEMAGENTS WORLDWIDE</title>
+
+<style>
+
+/* =========================================================
+   PEACEMAGENTS WORLDWIDE
+   VISUAL SYSTEM
+   01 Editorial / Luxury
+   02 Raw Streetwear
+   03 Minimal Futuristic
+========================================================= */
+
+:root {
+  --bg: #f4f0e7;
+  --surface: #fffdf8;
+  --text: #171714;
+  --muted: #77736b;
+  --line: #d9d4ca;
+  --accent: #596653;
+  --accent-2: #171714;
+
+  --radius: 0px;
+  --shadow: none;
+
+  --display: "Arial", sans-serif;
+  --body: "Arial", sans-serif;
+
+  --section-padding: clamp(60px, 9vw, 140px);
+  --page-padding: clamp(18px, 5vw, 70px);
+
+  --hero-size: clamp(55px, 10vw, 145px);
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  overflow-x: hidden;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.page {
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1500px, calc(100% - (var(--page-padding) * 2)));
+  margin: auto;
+}
+
+.upper {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 55px;
+}
+
+.section-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: clamp(40px, 6vw, 90px);
+  line-height: .9;
+  letter-spacing: -.055em;
+  margin: 0;
+  font-weight: 800;
+}
+
+.section-copy {
+  max-width: 430px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* =========================================================
+   ANNOUNCEMENT
+========================================================= */
+
+.announcement {
+  background: var(--text);
+  color: white;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px;
+  font-size: 10px;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 75px;
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--line);
+
+  display: flex;
+  align-items: center;
+}
+
+.nav-inner {
+  width: min(1500px, calc(100% - (var(--page-padding) * 2)));
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.logo {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -.04em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+}
+
+.nav-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.menu-button {
+  display: none;
+  border: 0;
+  background: transparent;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  min-height: calc(100vh - 109px);
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  width: min(1500px, calc(100% - (var(--page-padding) * 2)));
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  margin-bottom: 30px;
+  color: var(--accent);
+}
+
+.hero-title {
+  font-size: var(--hero-size);
+  line-height: .82;
+  letter-spacing: -.075em;
+  margin: 0;
+  max-width: 1100px;
+  font-weight: 900;
+}
+
+.hero-description {
+  max-width: 500px;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-top: 40px;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.button {
+  min-height: 48px;
+  padding: 0 25px;
+  border: 1px solid var(--text);
+  background: var(--text);
+  color: white;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+
+  transition: .25s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--text);
+}
+
+/* Hero decoration */
+
+.hero-shape {
+  position: absolute;
+  right: -10vw;
+  top: 8%;
+  width: 48vw;
+  height: 48vw;
+  max-width: 700px;
+  max-height: 700px;
+
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: .95;
+}
+
+.hero-shape::after {
+  content: "PM";
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  font-size: clamp(80px, 15vw, 220px);
+  font-weight: 900;
+  letter-spacing: -.1em;
+
+  color: rgba(255,255,255,.95);
+}
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.marquee {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: marquee 22s linear infinite;
+}
+
+.marquee span {
+  padding: 17px 40px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================================
+   BRAND STATEMENT
+========================================================= */
+
+.statement {
+  min-height: 70vh;
+
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.statement-title {
+  max-width: 1000px;
+  margin: auto;
+
+  font-size: clamp(55px, 10vw, 150px);
+  line-height: .83;
+  letter-spacing: -.075em;
+  font-weight: 900;
+}
+
+.statement-copy {
+  max-width: 650px;
+  margin: 40px auto 0;
+
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.product {
+  position: relative;
+}
+
+.product-image {
+  aspect-ratio: 4 / 5;
+  background: #dedbd2;
+
+  position: relative;
+  overflow: hidden;
+
+  display: grid;
+  place-items: center;
+}
+
+.product-image::before {
+  content: "";
+  position: absolute;
+  width: 62%;
+  height: 75%;
+  background: var(--text);
+  transform: rotate(-4deg);
+  opacity: .9;
+}
+
+.product-image::after {
+  content: attr(data-label);
+
+  position: absolute;
+  color: white;
+
+  font-size: clamp(30px, 5vw, 65px);
+  font-weight: 900;
+  letter-spacing: -.08em;
+}
+
+.product-info {
+  padding: 17px 2px 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.product-name {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.product-meta {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.product-price {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   EDITORIAL
+========================================================= */
+
+.editorial {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  min-height: 700px;
+}
+
+.editorial-image {
+  background:
+    linear-gradient(135deg, var(--accent), #171714);
+  display: grid;
+  place-items: center;
+  min-height: 500px;
+}
+
+.editorial-image span {
+  color: white;
+  font-size: clamp(60px, 11vw, 160px);
+  line-height: .8;
+  font-weight: 900;
+  letter-spacing: -.1em;
+  text-align: center;
+}
+
+.editorial-content {
+  background: var(--text);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: clamp(40px, 7vw, 110px);
+}
+
+.editorial-content .section-kicker {
+  color: #b7c2b1;
+}
+
+.editorial-title {
+  font-size: clamp(55px, 8vw, 110px);
+  line-height: .83;
+  letter-spacing: -.07em;
+  margin: 0;
+}
+
+.editorial-copy {
+  max-width: 450px;
+  margin-top: 35px;
+  color: #c7c4bc;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   WORLD
+========================================================= */
+
+.world {
+  text-align: center;
+}
+
+.world-title {
+  font-size: clamp(65px, 12vw, 175px);
+  line-height: .78;
+  letter-spacing: -.09em;
+  font-weight: 900;
+  margin: 0;
+}
+
+.world-copy {
+  max-width: 550px;
+  margin: 40px auto;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.world-map {
+  margin-top: 70px;
+  min-height: 350px;
+
+  border: 1px solid var(--line);
+
+  display: grid;
+  place-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.world-map::before {
+  content: "";
+  position: absolute;
+
+  width: 80%;
+  height: 55%;
+
+  border: 1px dashed var(--line);
+  border-radius: 50%;
+
+  transform: rotate(-15deg);
+}
+
+.world-points {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.world-point {
+  min-width: 105px;
+  padding: 18px;
+
+  background: var(--surface);
+  border: 1px solid var(--line);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+/* =========================================================
+   INSTAGRAM
+========================================================= */
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.instagram-item {
+  aspect-ratio: 1;
+  background: var(--accent);
+
+  display: grid;
+  place-items: center;
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.instagram-item:nth-child(2) {
+  background: var(--text);
+}
+
+.instagram-item:nth-child(3) {
+  background: #d6d1c6;
+  color: var(--text);
+}
+
+.instagram-item:nth-child(4) {
+  background: #858c7d;
+}
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.newsletter {
+  background: var(--text);
+  color: white;
+
+  padding: var(--section-padding) 0;
+}
+
+.newsletter-inner {
+  text-align: center;
+}
+
+.newsletter-title {
+  margin: 0;
+
+  font-size: clamp(55px, 10vw, 145px);
+  line-height: .8;
+  letter-spacing: -.08em;
+}
+
+.newsletter-copy {
+  max-width: 500px;
+  margin: 35px auto;
+
+  color: #bdbab2;
+  line-height: 1.7;
+}
+
+.newsletter-form {
+  max-width: 580px;
+  margin: auto;
+
+  display: flex;
+}
+
+.newsletter-form input {
+  flex: 1;
+
+  height: 55px;
+
+  padding: 0 18px;
+
+  background: transparent;
+  border: 1px solid #55544f;
+
+  color: white;
+
+  outline: none;
+}
+
+.newsletter-form button {
+  height: 55px;
+  padding: 0 25px;
+
+  border: 1px solid white;
+  background: white;
+  color: var(--text);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  padding: 50px 0 30px;
+
+  background: var(--text);
+  color: white;
+
+  border-top: 1px solid #353530;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -.06em;
+}
+
+.footer-statement {
+  max-width: 330px;
+
+  margin-top: 20px;
+
+  color: #aaa8a1;
+  line-height: 1.6;
+}
+
+.footer-column h4 {
+  font-size: 10px;
+  letter-spacing: .15em;
+  margin: 0 0 20px;
+}
+
+.footer-column a {
+  display: block;
+
+  color: #aaa8a1;
+
+  font-size: 12px;
+
+  margin-bottom: 11px;
+}
+
+.footer-bottom {
+  margin-top: 70px;
+  padding-top: 20px;
+
+  border-top: 1px solid #353530;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 10px;
+  color: #77756f;
+}
+
+/* =========================================================
+   STYLE SWITCHER
+========================================================= */
+
+.style-switcher {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 500;
+
+  display: flex;
+  gap: 5px;
+
+  padding: 5px;
+
+  background: rgba(20,20,18,.92);
+
+  border-radius: 100px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.2);
+}
+
+.style-switcher button {
+  border: 0;
+  background: transparent;
+
+  color: #aaa;
+
+  padding: 8px 11px;
+
+  border-radius: 100px;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.style-switcher button.active {
+  background: white;
+  color: #111;
+}
+
+/* =========================================================
+   STYLE 01 — EDITORIAL / LUXURY
+========================================================= */
+
+body.editorial-theme {
+  --bg: #f4f0e7;
+  --surface: #fffdf8;
+  --text: #171714;
+  --muted: #77736b;
+  --line: #d9d4ca;
+  --accent: #596653;
+
+  --radius: 0px;
+
+  --display: Georgia, serif;
+}
+
+body.editorial-theme .hero-title,
+body.editorial-theme .statement-title,
+body.editorial-theme .world-title,
+body.editorial-theme .newsletter-title,
+body.editorial-theme .section-title {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -.07em;
+}
+
+body.editorial-theme .hero-title {
+  font-style: italic;
+}
+
+body.editorial-theme .hero-shape {
+  border-radius: 2px;
+  transform: rotate(8deg);
+}
+
+body.editorial-theme .product-image::before {
+  border-radius: 0;
+}
+
+/* =========================================================
+   STYLE 02 — RAW STREETWEAR
+========================================================= */
+
+body.raw-theme {
+  --bg: #e9e5dc;
+  --surface: #f4f1e9;
+  --text: #111;
+  --muted: #666;
+  --line: #111;
+  --accent: #d6ff00;
+
+  --radius: 0px;
+}
+
+body.raw-theme .announcement {
+  background: var(--accent);
+  color: #111;
+}
+
+body.raw-theme .nav {
+  border-bottom: 3px solid #111;
+  background: var(--bg);
+}
+
+body.raw-theme .logo {
+  font-size: 20px;
+  letter-spacing: -.09em;
+}
+
+body.raw-theme .hero {
+  min-height: 90vh;
+}
+
+body.raw-theme .hero-title {
+  font-size: clamp(65px, 13vw, 180px);
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+}
+
+body.raw-theme .hero-shape {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 0;
+  transform: rotate(12deg);
+  background: var(--accent);
+  border: 4px solid #111;
+}
+
+body.raw-theme .hero-shape::after {
+  color: #111;
+}
+
+body.raw-theme .button {
+  border: 3px solid #111;
+  box-shadow: 5px 5px 0 #111;
+}
+
+body.raw-theme .button:hover {
+  transform: translate(-2px,-2px);
+  box-shadow: 8px 8px 0 #111;
+}
+
+body.raw-theme .statement-title,
+body.raw-theme .world-title,
+body.raw-theme .newsletter-title,
+body.raw-theme .section-title {
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+}
+
+body.raw-theme .product-image {
+  border: 3px solid #111;
+}
+
+body.raw-theme .product-image::before {
+  border-radius: 0;
+  transform: rotate(-8deg);
+}
+
+body.raw-theme .editorial-content {
+  border: 3px solid #111;
+  background: var(--accent);
+  color: #111;
+}
+
+body.raw-theme .editorial-content .section-kicker,
+body.raw-theme .editorial-copy {
+  color: #111;
+}
+
+body.raw-theme .world-map {
+  border: 3px solid #111;
+}
+
+body.raw-theme .world-point {
+  border: 3px solid #111;
+  box-shadow: 4px 4px 0 #111;
+}
+
+body.raw-theme .newsletter {
+  background: var(--accent);
+  color: #111;
+}
+
+body.raw-theme .newsletter-copy {
+  color: #222;
+}
+
+body.raw-theme .newsletter-form input {
+  border: 3px solid #111;
+  color: #111;
+}
+
+body.raw-theme .newsletter-form button {
+  border: 3px solid #111;
+  background: #111;
+  color: white;
+}
+
+body.raw-theme footer {
+  border-top: 3px solid #111;
+}
+
+/* =========================================================
+   STYLE 03 — MINIMAL FUTURISTIC
+========================================================= */
+
+body.future-theme {
+  --bg: #090a0b;
+  --surface: #111315;
+  --text: #f2f3ee;
+  --muted: #858b88;
+  --line: #292d2e;
+  --accent: #d9ff55;
+
+  --radius: 3px;
+}
+
+body.future-theme .announcement {
+  background: var(--accent);
+  color: #090a0b;
+}
+
+body.future-theme .nav {
+  background: rgba(9,10,11,.88);
+}
+
+body.future-theme .hero {
+  min-height: calc(100vh - 109px);
+  background:
+    linear-gradient(rgba(217,255,85,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217,255,85,.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+body.future-theme .hero-title {
+  font-size: clamp(60px, 11vw, 160px);
+  text-transform: uppercase;
+}
+
+body.future-theme .hero-title::after {
+  content: " / 001";
+  color: var(--accent);
+  font-size: .18em;
+  vertical-align: top;
+  letter-spacing: .1em;
+}
+
+body.future-theme .hero-shape {
+  width: 35vw;
+  height: 35vw;
+  border-radius: 3px;
+  background: transparent;
+  border: 1px solid var(--accent);
+  transform: rotate(45deg);
+}
+
+body.future-theme .hero-shape::after {
+  color: var(--accent);
+  transform: rotate(-45deg);
+}
+
+body.future-theme .button {
+  border-radius: 3px;
+}
+
+body.future-theme .statement {
+  background: #0d0f10;
+}
+
+body.future-theme .statement-title {
+  text-transform: uppercase;
+}
+
+body.future-theme .product-image {
+  background: #151719;
+  border: 1px solid var(--line);
+}
+
+body.future-theme .product-image::before {
+  background: #25292a;
+}
+
+body.future-theme .product-image::after {
+  color: var(--accent);
+}
+
+body.future-theme .editorial-image {
+  background:
+    linear-gradient(rgba(217,255,85,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217,255,85,.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+body.future-theme .editorial-image span {
+  color: var(--accent);
+}
+
+body.future-theme .editorial-content {
+  background: #111315;
+}
+
+body.future-theme .world-map {
+  background:
+    linear-gradient(rgba(217,255,85,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217,255,85,.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+body.future-theme .world-point {
+  background: #111315;
+  border-color: #383d3e;
+}
+
+body.future-theme .instagram-item {
+  border: 1px solid var(--line);
+}
+
+body.future-theme .newsletter {
+  background: #050606;
+}
+
+body.future-theme footer {
+  background: #050606;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .nav-inner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    color: var(--text);
+  }
+
+  .hero {
+    min-height: 750px;
+  }
+
+  .hero-shape {
+    width: 70vw;
+    height: 70vw;
+    right: -25vw;
+    top: 10%;
+    opacity: .35;
+  }
+
+  .hero-title {
+    max-width: 90%;
+  }
+
+  .products {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .editorial {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  :root {
+    --page-padding: 18px;
+    --section-padding: 75px;
+  }
+
+  .section-header {
+    display: block;
+  }
+
+  .section-copy {
+    margin-top: 25px;
+  }
+
+  .hero {
+    min-height: 700px;
+  }
+
+  .hero-title {
+    font-size: clamp(52px, 17vw, 100px);
+  }
+
+  .hero-description {
+    max-width: 330px;
+    font-size: 14px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    aspect-ratio: 1 / 1.15;
+  }
+
+  .newsletter-form {
+    display: block;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    margin-top: 8px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    display: block;
+    line-height: 2;
+  }
+
+  .style-switcher {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+}
+
+</style>
+</head>
+
+<body class="editorial-theme">
+
+<!-- ======================================================
+     ANNOUNCEMENT
+====================================================== -->
+
+<div class="announcement">
+  PEACEMAGENTS WORLDWIDE — CALM REBELS, EVERYWHERE.
+</div>
+
+<!-- ======================================================
+     NAVIGATION
+====================================================== -->
+
+<header class="nav">
+
+  <div class="nav-inner">
+
+    <a href="#" class="logo">
+      PEACEMAGENTS
+    </a>
+
+    <nav class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#collections">Collections</a>
+      <a href="#world">World</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#shop">Search</a>
+      <a href="#">Account</a>
+      <a href="#">Bag <span id="cartCount">(0)</span></a>
+    </div>
+
+    <button class="menu-button">
+      MENU
+    </button>
+
+  </div>
+
+</header>
+
+<main>
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="hero-eyebrow">
+      PEACEMAGENTS WORLDWIDE / 001
+    </div>
+
+    <h1 class="hero-title">
+      STREETWEAR<br>
+      FOR THE<br>
+      CALM REBELS.
+    </h1>
+
+    <p class="hero-description">
+      Bold pieces. Quiet confidence.
+      A movement built around peace,
+      individuality and self-expression.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#shop" class="button">
+        Shop the collection
+      </a>
+
+      <a href="#world" class="button secondary">
+        Enter the world
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="hero-shape"></div>
+
+</section>
+
+<!-- ======================================================
+     MARQUEE
+====================================================== -->
+
+<div class="marquee">
+
+  <div class="marquee-track">
+
+    <span>PEACE</span>
+    <span>INDIVIDUALITY</span>
+    <span>CONFIDENCE</span>
+    <span>COMMUNITY</span>
+    <span>PEACEMAGENTS WORLDWIDE</span>
+
+    <span>PEACE</span>
+    <span>INDIVIDUALITY</span>
+    <span>CONFIDENCE</span>
+    <span>COMMUNITY</span>
+    <span>PEACEMAGENTS WORLDWIDE</span>
+
+  </div>
+
+</div>
+
+<!-- ======================================================
+     BRAND STATEMENT
+====================================================== -->
+
+<section class="section statement" id="about">
+
+  <div class="container">
+
+    <div class="section-kicker">
+      THE PEACEMAGENTS MINDSET
+    </div>
+
+    <h2 class="statement-title">
+      LOUD IDEAS.<br>
+      QUIET ENERGY.
+    </h2>
+
+    <p class="statement-copy">
+      PEACEMAGENTS is for those who don't need
+      to shout to be heard. We create minimal
+      streetwear with bold meaning — designed
+      for people who carry their own peace
+      wherever they go.
+    </p>
+
+    <div style="margin-top:35px;">
+      <a href="#world" class="button secondary">
+        Our story
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================================
+     SHOP
+====================================================== -->
+
+<section class="section" id="shop">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div>
+
+        <div class="section-kicker">
+          THE CORE COLLECTION
+        </div>
+
+        <h2 class="section-title">
+          THE LATEST.
+        </h2>
+
+      </div>
+
+      <p class="section-copy">
+        Essential pieces built around
+        the PEACEMAGENTS identity.
+      </p>
+
+    </div>
+
+    <div class="products">
+
+      <!-- PRODUCT 1 -->
+
+      <article class="product">
+
+        <div
+          class="product-image"
+          data-label="PM"
+        ></div>
+
+        <div class="product-info">
+
+          <div>
+
+            <div class="product-name">
+              PEACEMAGENTS ESSENTIAL TEE
+            </div>
+
+            <div class="product-meta">
+              BLACK / S — XL
+            </div>
+
+          </div>
+
+          <div class="product-price">
+            $35
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- PRODUCT 2 -->
+
+      <article class="product">
+
+        <div
+          class="product-image"
+          data-label="CR"
+        ></div>
+
+        <div class="product-info">
+
+          <div>
+
+            <div class="product-name">
+              CALM REBEL HOODIE
+            </div>
+
+            <div class="product-meta">
+              BLACK / M — XL
+            </div>
+
+          </div>
+
+          <div class="product-price">
+            $75
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- PRODUCT 3 -->
+
+      <article class="product">
+
+        <div
+          class="product-image"
+          data-label="WW"
+        ></div>
+
+        <div class="product-info">
+
+          <div>
+
+            <div class="product-name">
+              PM WORLDWIDE CAP
+            </div>
+
+            <div class="product-meta">
+              BLACK / ONE SIZE
+            </div>
+
+          </div>
+
+          <div class="product-price">
+            $28
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================================
+     EDITORIAL
+====================================================== -->
+
+<section class="editorial" id="collections">
+
+  <div class="editorial-image">
+
+    <span>
+      PEACE<br>
+      IS NOT<br>
+      PASSIVE.
+    </span>
+
+  </div>
+
+  <div class="editorial-content">
+
+    <div class="section-kicker">
+      THE MOVEMENT
+    </div>
+
+    <h2 class="editorial-title">
+      PEACE IS<br>
+      NOT<br>
+      PASSIVE.
+    </h2>
+
+    <p class="editorial-copy">
+      It is a choice.
+      A mindset.
+      A way of moving through the world.
+      The clothing is only part of it.
+    </p>
+
+    <div style="margin-top:30px;">
+
+      <a href="#world" class="button secondary">
+        Enter the world
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================================
+     WORLD
+====================================================== -->
+
+<section class="section world" id="world">
+
+  <div class="container">
+
+    <div class="section-kicker">
+      PEACEMAGENTS WORLDWIDE
+    </div>
+
+    <h2 class="world-title">
+      ONE MINDSET.<br>
+      NO BORDERS.
+    </h2>
+
+    <p class="world-copy">
+      PEACEMAGENTS started somewhere.
+      The mindset doesn't have to stay there.
+      Wherever you are in the world,
+      you can be a PEACEMAGENT.
+    </p>
+
+    <div class="world-map">
+
+      <div class="world-points">
+
+        <div class="world-point">
+          ZW<br>
+          <span class="muted">HOME</span>
+        </div>
+
+        <div class="world-point">
+          ZA<br>
+          <span class="muted">COMMUNITY</span>
+        </div>
+
+        <div class="world-point">
+          UK<br>
+          <span class="muted">COMMUNITY</span>
+        </div>
+
+        <div class="world-point">
+          US<br>
+          <span class="muted">COMMUNITY</span>
+        </div>
+
+        <div class="world-point">
+          🌐<br>
+          <span class="muted">WORLD</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================================
+     INSTAGRAM
+====================================================== -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div>
+
+        <div class="section-kicker">
+          FOLLOW THE MOVEMENT
+        </div>
+
+        <h2 class="section-title">
+          @PEACEMAGENTS
+        </h2>
+
+      </div>
+
+      <a
+        href="https://instagram.com/peacemagents"
+        class="button secondary"
+        target="_blank"
+      >
+        Instagram
+      </a>
+
+    </div>
+
+    <div class="instagram-grid">
+
+      <div class="instagram-item">
+        PM / 001
+      </div>
+
+      <div class="instagram-item">
+        CALM REBELS
+      </div>
+
+      <div class="instagram-item">
+        PEACE
+      </div>
+
+      <div class="instagram-item">
+        WORLDWIDE
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================================
+     NEWSLETTER
+====================================================== -->
+
+<section class="newsletter">
+
+  <div class="container newsletter-inner">
+
+    <div class="section-kicker">
+      PEACEMAGENTS WORLDWIDE
+    </div>
+
+    <h2 class="newsletter-title">
+      STAY IN<br>
+      THE LOOP.
+    </h2>
+
+    <p class="newsletter-copy">
+      New drops. Limited pieces.
+      Stories from the PEACEMAGENTS world.
+    </p>
+
+    <form
+      class="newsletter-form"
+      id="newsletterForm"
+    >
+
+      <input
+        type="email"
+        placeholder="Your email address"
+        required
+      >
+
+      <button type="submit">
+        Join
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-logo">
+          PEACEMAGENTS
+        </div>
+
+        <p class="footer-statement">
+          Streetwear for the calm rebels.
+          One mindset. No borders.
+        </p>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h4>SHOP</h4>
+
+        <a href="#shop">T-Shirts</a>
+        <a href="#shop">Hoodies</a>
+        <a href="#shop">Caps</a>
+        <a href="#shop">Accessories</a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h4>WORLD</h4>
+
+        <a href="#world">Our Story</a>
+        <a href="#world">Community</a>
+        <a href="#world">Worldwide</a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h4>CONNECT</h4>
+
+        <a
+          href="https://instagram.com/peacemagents"
+          target="_blank"
+        >
+          Instagram
+        </a>
+
+        <a href="#">
+          Contact
+        </a>
+
+        <a href="#">
+          Support
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 PEACEMAGENTS
+      </span>
+
+      <span>
+        CALM REBELS, EVERYWHERE.
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- ======================================================
+     STYLE SWITCHER
+====================================================== -->
+
+<div class="style-switcher">
+
+  <button
+    class="active"
+    data-theme="editorial-theme"
+  >
+    EDITORIAL
+  </button>
+
+  <button
+    data-theme="raw-theme"
+  >
+    RAW
+  </button>
+
+  <button
+    data-theme="future-theme"
+  >
+    FUTURISTIC
+  </button>
+
+</div>
+
+<script>
+
+/* =========================================================
+   THEME SWITCHER
+========================================================= */
+
+const themeButtons =
+  document.querySelectorAll(".style-switcher button");
+
+themeButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const theme =
+      button.dataset.theme;
+
+    document.body.className = theme;
+
+    themeButtons.forEach(btn => {
+      btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    localStorage.setItem(
+      "peacemagents-theme",
+      theme
+    );
+
+  });
+
+});
+
+
+/* =========================================================
+   RESTORE THEME
+========================================================= */
+
+const savedTheme =
+  localStorage.getItem("peacemagents-theme");
+
+if (savedTheme) {
+
+  document.body.className = savedTheme;
+
+  themeButtons.forEach(button => {
+
+    button.classList.toggle(
+      "active",
+      button.dataset.theme === savedTheme
+    );
+
+  });
+
+}
+
+
+/* =========================================================
+   NEWSLETTER DEMO
+========================================================= */
+
+const newsletterForm =
+  document.getElementById("newsletterForm");
+
+newsletterForm.addEventListener(
+  "submit",
+  event => {
+
+    event.preventDefault();
+
+    const email =
+      newsletterForm.querySelector("input").value;
+
+    if (!email) return;
+
+    alert(
+      "Welcome to PEACEMAGENTS WORLDWIDE."
+    );
+
+    newsletterForm.reset();
+
+  }
+);
+
+
+/* =========================================================
+   DEMO CART
+========================================================= */
+
+let cartCount = 0;
+
+document.querySelectorAll(".product").forEach(product => {
+
+  product.addEventListener("click", () => {
+
+    cartCount++;
+
+    document.getElementById(
+      "cartCount"
+    ).textContent = `(${cartCount})`;
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
