@@ -1,0 +1,1 @@
+export default function sitemap(){const base=process.env.NEXT_PUBLIC_SITE_URL||"https://example.vercel.app";return ["","/shop","/about","/contact","/account","/admin"].map(path=>({url:base+path,lastModified:new Date()}));}
