@@ -1,8 +1,17 @@
 import "./globals.css";
-export const metadata={
-  title:"PEACEMAGENTS WORLDWIDE",
-  description:"Streetwear for the calm rebels. Bold ideas. Quiet energy. No borders."
+import { CartProvider } from "../components/CartProvider";
+
+export const metadata = {
+  title: "PEACEMAGENTS WORLDWIDE",
+  description: "Streetwear for the calm rebels.",
 };
-export default function RootLayout({children}) {
-  return <html lang="en"><body>{children}</body></html>;
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <CartProvider>{children}</CartProvider>
+      </body>
+    </html>
+  );
 }
